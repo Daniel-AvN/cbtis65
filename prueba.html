@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid con hijos de diferentes tamaños</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 300px;
+            margin: 0 auto;
+            grid-auto-flow: row; /* Alinear elementos en una nueva fila si no caben en la fila actual */
+        }
+
+        .grid-item {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Contenido centrado</div>
+        <div class="grid-item">Otro contenido</div>
+        <div class="grid-item">Contenido más grande que los demás, esto es más grande y no tapa a los otros</div>
+        <!-- Otros hijos del grid -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!--   Alumno: Leonardo Daniel Aviña Neri 5PRAM  -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBTis 65</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/2e2efd1aaa.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+    <link rel="shortcut icon" href="assets/icono.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Kdam+Thmor+Pro&family=Nova+Slim&family=Nunito+Sans:opsz,wght@6..12,300;6..12,500&family=Open+Sans:wght@300&family=Roboto+Slab&family=Roboto:wght@300&family=Signika+Negative:wght@600&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body class="body">
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="logo nav-link"> <img src="assets/logonegativo.svg" width="60px" alt=""> </a>
+        <button class="nav-toggle" aria-label="Abrir menú">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link">Departamentos</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="estudiantes.html" class="nav-menu-link nav-link">Estudiantes</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="novedades.html" class="nav-menu-link nav-link">Novedades</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link nav-link "
+              >Nosotros</a
+            >
+          </li>
+            <li class="nav-menu-item">
+                <!-- nav-menu-link -->
+              <a href="https://seaacademic.net:449/cbtis065" target="_blank" class=" nav-link"><img class="nav-menu-image" src="assets/seaacademic.png" alt=""></a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    
+    <!-- main -->
+    <main class="main">
+
+      <!-- cuando sea solo texto -->
+        <section class="container">
+            <h1 class="container__title">Buzón</h1>
+            <form class="">
+              <h2 class="container__title fz22">Tipo de comentario:</h2>
+              <!-- dflex-row-wrap -->
+              <article class="dflex-row-wrap ">
+
+                  <section class="l-center">
+                    <input type="radio" checked id="opcion1" name="tipo">
+                    <label for="opcion1" class="radio_label cblack" onclick="seleccionarRadio('opcion1')">Sugerencia</label>
+                  </section>
+                  
+                  <section class="l-center">
+                    <input type="radio" id="opcion2" name="tipo">
+                    <label for="opcion2" class="radio_label r2 cblack" onclick="seleccionarRadio('opcion2')">Queja</label>
+                  </section>
+
+                  <section class="l-center">
+                    <input type="radio" id="opcion3" name="tipo">
+                  <label for="opcion3" class="radio_label cblack" onclick="seleccionarRadio('opcion3')">Agradecimiento</label> 
+                  </section>
+
+              </article>
+
+              <h2 class="container__title fz22 mt20">Comentario:</h2>
+              <article class="dflex-row-wrap ">
+                <textarea class="form__textarea" name="comentario" id="comentario" minlength="10" maxlength="1000" cols="80" rows="5" placeholder="se respetuoso, evita el spam" required></textarea>
+              </article>
+
+              <article class="dflex-column-wrap w300 ">
+                  <h2 class="container__title fz22 mt20">Responde sobre ti:</h2>
+                  
+                  <div class="dflex-row-wrap form__element">
+                    <label for="opcion3" class="radio_label cblack">Nombre completo:</label> 
+                  <input class="form_in" type="text" id="nombre" name="nombre" placeholder="Nombre y apellidos" required>
+                  </div>
+                  
+                  <div class="dflex-row-wrap form__element">
+                    <label for="opcion3" class="radio_label cblack">Edad:</label> 
+                  <input class="form_in" type="number" min="10" max="100" id="edad" name="edad" required>
+                  </div>
+
+                  <div class="dflex-row-wrap form__element">
+                    <label for="opcion3" class="radio_label cblack">Email:</label> 
+                  <input class="form_in" type="email" id="email" name="email" required>
+                  </div>
+                  
+                  <div class="dflex-row-wrap form__element">
+                    <label for="opcion3" class=" cblack">Estatus:</label> 
+                  <select name="estatus" id="estatus" class="form_in radio_label">
+                    <option value="alumno">Alumno</option>
+                    <option value="docente">Docente</option>
+                    <option  value="padre">Padre de familia</option>
+                    <option value="padre">Empleado de la institución </option>
+                  </select>
+                  </div>
+
+              </article>
+
+              <button class="form__btn">enviar</button>
+
+            </form>
+        </section>
+
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        
+        <section class="footer__container">
+            
+            <article class="subcontainer">
+                <ul class="footer__list">
+                    <li class="footer__list__li">
+                        <!-- <i class="fa-regular fa-envelope" style="color: #fff;"></i> -->
+                        <img src="assets/correo.png" class="footer__icon" alt="">
+                        <a href="buzon.html" class="nav-link">quejasysugerencias@cbtis65.edu.mx</a>     
+                    </li>
+                </ul>
+
+                <ul class="footer__social footer__list">
+                    <li class="social__icon">
+                        <a href="https://www.facebook.com/CBTis65.Oficial" target="_blank">
+                            <img src="assets/facebook.png" class="footer__icon" alt="">
+                            <!-- <i class="fa-brands fa-facebook" style="color: #fff;"></i> -->
+                        </a>
+                    </li>
+                    <li class="social__icon">
+                        <a href="https://www.instagram.com/cbtis65_oficial/" target="_blank">
+                            <img src="assets/instagram.png" class="footer__icon" alt="">
+                            <!-- <i class="fa-brands fa-instagram" style="color: #fff;"></i> -->
+                        </a>
+                    </li>
+                    <li class="social__icon">
+                        <a href="https://www.youtube.com/@cbtis65oficial/" target="_blank">
+                            <img src="assets/youtube.png" class="footer__icon" alt="">
+                            <!-- <i class="fa-brands fa-youtube" style="color: #fff;"></i> -->
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <article class="subcontainer">
+                <ul class="footer__list ">
+                    <li>
+                        <img src="assets/telefono.png" class="footer__icon" alt="">
+                        <!-- <i class="fa-solid fa-phone" style="color: #fff;"></i> -->
+                        <span href="+52 462 624 1442">+52 462 624 1442</span>
+                    </li>
+                </ul>
+                <ul class="footer__list">
+                    <li>
+                        <img src="assets/horario.png" class="footer__icon" alt="">
+                        <!-- <i class="fa-regular fa-clock" style="color: #fff;"></i> -->
+                        <span href="">Lunes a Viernes - 9am a 6pm</span>
+                    </li>
+                </ul>
+                    
+                
+            </article>
+        
+        </section>
+
+        <section>
+            <!-- despues remplazar esto por variables de tinker -->
+            <span class="anioCorriente">CBTis 65 (2023)</span>
+        </section>
+
+    </footer>
+
+  </body>
+</html>
